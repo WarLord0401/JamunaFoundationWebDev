@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+/*  Overall styling  */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.section {
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  font-size: xx-large;
+}
+
+.img-bg {
+  height: 110vh;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+}
+
+/*  Hero Section  */
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  left: 5%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+}
+
+#logo-front,
+#logo-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo-front {
+  width: 100px;
+  z-index: 2;
+}
+
+#logo-back {
+  width: 200px;
+  animation: rotation 10s linear infinite;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.kanishk path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.1;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  animation: textAnimation 3s ease-in forwards;
+}
+
+.teotia path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.1;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  animation: textAnimation 3s ease-in forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 70;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  align-items: center;
+  margin-top: 20px;
+  height: 25%;
+}
+
+#subtitle {
+  font-size: x-large;
+  margin: 50px;
+  text-align: end;
+  text-shadow: 0px 0px 10px white;
+}
+
+.tag-container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag path {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+.right {
+  transform: scaleX(-1);
+}
+
+.skill-scroll {
+  margin: 20px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.scrollbox {
+  overflow: hidden;
+  height: 45px;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.effect {
+  transform: scale(0.8);
+  color: rgba(180, 180, 180, 0.3);
+}
+.scrollbox span {
+  display: block;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  animation: scroll-vert 5s infinite;
+  font-weight: 500;
+}
+
+@keyframes scroll-vert {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  20%,
+  30% {
+    transform: translateY(-100%);
+  }
+  40%,
+  50% {
+    transform: translateY(-200%);
+  }
+  60%,
+  70% {
+    transform: translateY(-300%);
+  }
+  80%,
+  90% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(-500%);
+  }
+}
+
+.scroll-down {
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-icon {
+  z-index: 5px;
+  width: 50px;
+}
+
+.scroll-icon {
+  width: 40px;
+  height: 40px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+/*  About Section  */
+
+#about {
+  position: relative;
+  height: 100vh;
+  color: white;
+}
+
+.hdr{
+    color: #fff;
+    z-index: 10;
+}
+
+.gray-texture {
+  width: 100%;
+}
+
+#profile {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 20%;
+}
+
+#prof-placeholder {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 10;
+  width: 290px;
+  height: 450px;
+  border: solid gray 10px;
+}
