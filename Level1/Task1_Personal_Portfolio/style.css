@@ -15,10 +15,7 @@ html {
   width: 100%;
   overflow: hidden;
   font-size: xx-large;
-}
-
-#header {
-  overflow-y: hidden;
+  position: relative;
 }
 
 .img-bg {
@@ -395,3 +392,341 @@ html {
     text-shadow: 0 0 25px #fff;
   }
 }
+
+/* Skills Section */
+
+#skill-heading {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  z-index: 10;
+  left: calc(50% - 75px);
+  top: calc(50% - 25px);
+}
+
+.skill-banner {
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-banner .slider {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: calc(50% - 50px);
+
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+
+  animation: autoRun 30s linear infinite;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateY(-360deg);
+  }
+}
+
+.skill-banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+
+  transform: rotateY(calc((var(--position)) * (360 / var(--quantity)) * 1deg))
+    translateZ(550px) rotateX(-10deg);
+}
+
+.skill-banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skill-list {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: justify;
+}
+
+.html,
+.css,
+.js,
+.react,
+.tailwind,
+.python,
+.cpp,
+.davinci,
+.blender,
+.excel {
+  margin-top: 30px;
+  font-size: 24px;
+  cursor: default;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.html {
+  color: orange;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+}
+.html:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.css {
+  color: rgb(52, 113, 235);
+  border-radius: 10px;
+  width: 60px;
+  text-align: center;
+}
+.css:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.js {
+  color: #f0e16d;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+.js:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.react {
+  color: #61dafb;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+}
+.react:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.tailwind {
+  color: #38bdf8;
+  border-radius: 10px;
+  width: 170px;
+  text-align: center;
+}
+.tailwind:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.python {
+  color: #aaa20d;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+}
+.python:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+.cpp {
+  color: #49b0ff;
+  border-radius: 10px;
+  width: 70px;
+  text-align: center;
+}
+.cpp:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.excel {
+  color: #1ab25e;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+}
+.excel:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.davinci {
+  color: #ff3700;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+.davinci:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.blender {
+  color: #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+}
+.blender:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px #fff;
+}
+
+.scr {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* PROJECT SECTION */
+
+.header {
+  position: relative;
+  text-align: center;
+  margin: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.carousel .projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+  gap: 20px;
+  height: 80vh;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel .projects .project {
+  height: 30vh;
+  width: 30vw;
+  border-radius: 20px;
+  transition: filter 0.5s ease;
+  box-shadow: 0 0 10px black;
+  position: relative;
+  filter: brightness(0.5);
+  overflow: hidden;
+}
+
+.carousel .projects .project:hover {
+  animation-play-state: paused;
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+#projects:target .carousel .projects .project .content {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out forwards;
+}
+.carousel .projects .project::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.carousel .projects .project .proj {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel .projects .project .content {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.link-img {
+  width: 90px;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.link-img img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.link-img img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.project-title {
+  margin: 20px;
+  margin-left: 40px;
+  font-size: 30px;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.vector{
+  position: relative;
+}
+
+#vector-design-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+
+#vector-design-bot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+#projects .scroll-to-section {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+} 
