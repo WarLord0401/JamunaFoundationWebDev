@@ -141,7 +141,8 @@
           <span class="me-char">E</span>
         </span>
       </h1>
-
+      <img src="./assets/backgrounds/vector-design.png" alt="border" class="profile-border">
+      <img src="./assets/backgrounds/vector-design.png" alt="border" class="profile-border-two">
       <img src="./assets/prof.png" alt="profile" id="profile" />
       <div class="about-txt">
         <div>
@@ -193,14 +194,13 @@
         <a class="scroll-to-section" href="#skills"
           ><img
             class="scroll-icon"
+            id="about-scroll"
             alt="Scroll Down"
             src="./assets/icons/arrow.png"
         /></a>
       </div>
     </section>
-
     <!-- SKILLS SECTION -->
-
     <section id="skills" class="section">
       <img
         class="img-bg"
@@ -239,10 +239,10 @@
             />
           </div>
           <div class="item" style="--position: 6">
-            <img src="./assets/tech/pngwing.com.png" alt="Python" />
+            <img src="./assets/tech/pngwing.com.png" alt="Python" title="Python"/>
           </div>
           <div class="item" style="--position: 7">
-            <img src="./assets/tech/cpp.png" alt="C++" />
+            <img src="./assets/tech/cpp.png" alt="C++" title="C++"/>
           </div>
           <div class="item" style="--position: 8">
             <img
@@ -254,26 +254,26 @@
           <div class="item" style="--position: 9">
             <img
               src="./assets/tech/Microsoft_Office_Excel_(2019–present).svg.png"
-              alt="Excel"
+              alt="Excel" title="MS Excel"
             />
           </div>
           <div class="item" style="--position: 10">
-            <img src="./assets/tech/davinci.png" alt="Davinci" />
+            <img src="./assets/tech/davinci.png" alt="Davinci" title="Davinci Resolve"/>
           </div>
         </div>
       </div>
 
       <div class="skill-list">
-        <div class="html">HTML</div>
-        <div class="css">CSS</div>
-        <div class="js">JavaScript</div>
-        <div class="react">React.js</div>
-        <div class="tailwind">Tailwind CSS</div>
-        <div class="python">Python</div>
-        <div class="cpp">C++</div>
-        <div class="excel">MS Excel</div>
-        <div class="davinci">Davinci Resolve</div>
-        <div class="blender">Blender</div>
+        <div class="html"     title="HTML">HTML</div>
+        <div class="css"      title="CSS">CSS</div>
+        <div class="js"       title="JavaScript">JavaScript</div>
+        <div class="react"    title="React.js">React.js</div>
+        <div class="tailwind" title="TailwindCSS">Tailwind CSS</div>
+        <div class="python"   title="Python">Python</div>
+        <div class="cpp"      title="C++">C++</div>
+        <div class="excel"    title="MS Excel">MS Excel</div>
+        <div class="davinci"  title="Davinci">Davinci Resolve</div>
+        <div class="blender"  title="Blender">Blender</div>
       </div>
 
       <div class="scr">
@@ -287,55 +287,114 @@
     </section>
     <!-- PROJECT SECTION -->
     <section id="projects" class="section">
-      <img class="img-bg" src="./assets/backgrounds/rainbow-bg.png" alt="bg"/>
-      <h1 class="header">PROJECTS</h>
-        <div class="carousel">
-          <div class="projects">
-            <div class="project">
-              <img src="./assets/Projects/boa.png" alt="BOA" class="proj"/>
-              <div class="content">
-                <p class="link-img">
-                  <a href="https://github.com/WarLord0401/BOA" target="_blank" rel="noopener"><img src="./assets/icons/github.png" alt="GitHub" ></a>
-                  <a href="https://WarLord0401.github.io/BOA" target="_blank" rel="noopener"><img src="./assets/icons/link.png" alt="Live Demo" ></a>
-                </p>
-                <div class="project-title">Box Office App</div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="./assets/Projects/SortPaths.png" alt="SortPaths" class="proj"/>
-              <div class="content">
-                <p class="link-img">
-                  <a href="https://github.com/WarLord0401/SortPaths" target="_blank" rel="noopener"><img src="./assets/icons/github.png" alt="GitHub" ></a>
-                  <a href="https://sortpaths.surge.sh" target="_blank" rel="noopener"><img src="./assets/icons/link.png" alt="Live Demo" ></a>
-                </p>
-                <div class="project-title">SortPaths</div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="./assets/Projects/tictactoe.png" alt="Tic Tac Toe" class="proj"/>
-              <div class="content">
-                <p class="link-img">
-                  <a href="https://github.com/WarLord0401/tictactoe" target="_blank" rel="noopener"><img src="./assets/icons/github.png" alt="GitHub" ></a>
-                  <a href="https://tictac0401game.surge.sh" target="_blank" rel="noopener"><img src="./assets/icons/link.png" alt="Live Demo" ></a>
-                </p>
-                <div class="project-title">Tic Tac Toe</div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="./assets/Projects/nsa.png" alt="nsa" class="proj"/>
-              <div class="content">
-                <p class="link-img">
-                  <a href="https://github.com/WarLord0401/NSA" target="_blank" rel="noopener"><img src="./assets/icons/github.png" alt="GitHub" ></a>
-                  <a href="https://github.com/WarLord0401/NSA/blob/main/stock_analysis.ipynb" target="_blank" rel="noopener"><img src="./assets/icons/link.png" alt="Live Demo" ></a>
-                </p>
-                <div class="project-title">Nvidia Stock Analysis</div>
-              </div>
-            </div>
+      <img class="img-bg" src="./assets/backgrounds/rainbow-bg.png" alt="bg" />
+      <h1 class="header">PROJECTS</h1>
+      <div class="projects">
+        <div class="project">
+          <img src="./assets/Projects/boa.png" alt="BOA" class="proj" />
+          <div class="content">
+            <p class="link-img">
+              <a
+                href="https://github.com/WarLord0401/BOA"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/github.png" alt="GitHub"
+              /></a>
+              <a
+                href="https://WarLord0401.github.io/BOA"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/link.png" alt="Live Demo"
+              /></a>
+            </p>
           </div>
+          <div class="project-title">Box Office App</div>
         </div>
-        <div class="vector"><img src="./assets/backgrounds/vector-design.png" alt="design" id="vector-design-top"/></div>
-        <div class="vector"><img src="./assets/backgrounds/vector-design.png" alt="design" id="vector-design-bot"/></div>
-        <div class="scr">
+        <div class="project">
+          <img
+            src="./assets/Projects/SortPaths.png"
+            alt="SortPaths"
+            class="proj"
+          />
+          <div class="content">
+            <p class="link-img">
+              <a
+                href="https://github.com/WarLord0401/SortPaths"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/github.png" alt="GitHub"
+              /></a>
+              <a
+                href="https://sortpaths.surge.sh"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/link.png" alt="Live Demo"
+              /></a>
+            </p>
+          </div>
+          <div class="project-title">SortPaths</div>
+        </div>
+        <div class="project">
+          <img
+            src="./assets/Projects/tictactoe.png"
+            alt="Tic Tac Toe"
+            class="proj"
+          />
+          <div class="content">
+            <p class="link-img">
+              <a
+                href="https://github.com/WarLord0401/tictactoe"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/github.png" alt="GitHub"
+              /></a>
+              <a
+                href="https://tictac0401game.surge.sh"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/link.png" alt="Live Demo"
+              /></a>
+            </p>
+          </div>
+          <div class="project-title">Tic Tac Toe</div>
+        </div>
+        <div class="project">
+          <img src="./assets/Projects/nsa.png" alt="nsa" class="proj" />
+          <div class="content">
+            <p class="link-img">
+              <a
+                href="https://github.com/WarLord0401/NSA"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/github.png" alt="GitHub"
+              /></a>
+              <a
+                href="https://github.com/WarLord0401/NSA/blob/main/stock_analysis.ipynb"
+                target="_blank"
+                rel="noopener"
+                ><img src="./assets/icons/link.png" alt="Live Demo"
+              /></a>
+            </p>
+          </div>
+          <div class="project-title">Nvidia Stock Analysis</div>
+        </div>
+        <div class="vector">
+          <img
+            src="./assets/backgrounds/vector-design.png"
+            alt="design"
+            id="vector-design-top"
+          />
+        </div>
+        <div class="vector">
+          <img
+            src="./assets/backgrounds/vector-design.png"
+            alt="design"
+            id="vector-design-bot"
+          />
+        </div>
+      </div>
+
+      <div class="scr">
         <a class="scroll-to-section" href="#resume"
           ><img
             class="scroll-icon"
@@ -346,11 +405,100 @@
     </section>
     <!-- RESUME SECTION -->
     <section id="resume" class="section">
-      <h1 class="header">RESUME</h1>
+      <img
+        alt="background"
+        class="img-bg"
+        src="./assets/backgrounds/5166950.jpg"
+      />
       <div class="content">
-        
+        <object
+          class="pdf front"
+          data="./assets/Resume2.pdf"
+          width="40%"
+          height="600px"
+        ></object>
+        <div class="space"></div>
+        <div id="res-content">
+          <h1>RESUME</h1>
+          <p>
+            You can view and download my resume by clicking the button on the pdf viewer.
+          </p>
       </div>
-    
+      <a class="scroll-to-section" href="#contact">
+        <img
+          class="scroll-icon"
+          alt="Scroll Down"
+          src="./assets/icons/arrow.png"
+        />
+      </a>
     </section>
-  </body>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="sky">
+        <div class="star" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="star" style="left: 15%; animation-delay: 1.2s;"></div>
+        <div class="star" style="left: 25%; animation-delay: 0.6s;"></div>
+        <div class="star" style="left: 35%; animation-delay: 2.5s;"></div>
+        <div class="star" style="left: 45%; animation-delay: 1.1s;"></div>
+        <div class="star" style="left: 55%; animation-delay: 0.3s;"></div>
+        <div class="star" style="left: 65%; animation-delay: 3s;"></div>
+        <div class="star" style="left: 75%; animation-delay: 2.1s;"></div>
+        <div class="star" style="left: 85%; animation-delay: 1.8s;"></div>
+        <div class="star" style="left: 95%; animation-delay: 0.9s;"></div>
+        <div class="star" style="left: 5%; animation-delay: 5s;"></div>
+        <div class="star" style="left: 15%; animation-delay: 4.2s;"></div>
+        <div class="star" style="left: 25%; animation-delay: 6.6s;"></div>
+        <div class="star" style="left: 35%; animation-delay: 2.5s;"></div>
+        <div class="star" style="left: 45%; animation-delay: 3.1s;"></div>
+        <div class="star" style="left: 55%; animation-delay: 4.3s;"></div>
+        <div class="star" style="left: 65%; animation-delay: 1s;"></div>
+        <div class="star" style="left: 75%; animation-delay: 5.4s;"></div>
+        <div class="star" style="left: 85%; animation-delay: 2.8s;"></div>
+        <div class="star" style="left: 95%; animation-delay: 4.9s;"></div>
+    <!-- Add dozens more as needed -->
+      </div>
+
+      <h1 class="header" id="contact-me">CONTACT ME</h1>
+
+      <div class="contact-content">
+        <div class="row">
+          <div>
+            <img alt="email" id="mail" src="./assets/icons/email.png">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kanishkteotia5077@gmail.com">kanishkteotia5077@gmail.com</a>
+          </div>
+          <div>
+            <img alt="phone" src="./assets/icons/personal.png">
+            <a href="tel:+918791577343">+91 87915 77343</a>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <img alt="linkedin" src="./assets/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/teotia-kanishk/">Kanishk Teotia</a>
+          </div>
+          <div>
+            <img alt="github" id="git" src="./assets/icons/github.png">
+            <a href="https://github.com/WarLord0401">WarLord0401</a>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+     <footer id="footer">
+      <ul class="footer-links">
+        <li><a href="#" class="footer-link">Home</a></li>
+        <li><a href="#about" class="footer-link">About Me</a></li>
+        <li><a href="#skills" class="footer-link">Skills</a></li>
+        <li><a href="#projects" class="footer-link">Projects</a></li>
+        <li><a href="#resume" class="footer-link">Resume</a></li>
+      </ul>
+      <div id="copyright">
+        <div>© 2025 Kanishk Teotia</div>
+        <div>All rights reserved</div>
+        <a href="https://jamunafoundation.com" target="_blank" rel="noopener">jamunafoundation</a>
+      </div>
+    </footer>
+  </section>
+
+</body>
 </html>
