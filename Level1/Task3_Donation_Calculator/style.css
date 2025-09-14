@@ -1,0 +1,8 @@
+#check {
+  background-color: black;
+  color: yellow;
+  padding: 20px;
+  font-size: larger;
+  margin: 50px;
+  cursor: pointer;
+}
