@@ -400,10 +400,11 @@ html {
 
 #skill-heading {
   position: relative;
-  width: 150px;
+  width: 200px;
   height: 50px;
   z-index: 10;
-  left: calc(50% - 75px);
+  left: 50%;
+  transform: translateX(-50%);
   top: calc(50% - 25px);
 }
 
@@ -445,7 +446,6 @@ html {
 .skill-banner .slider .item {
   position: absolute;
   inset: 0 0 0 0;
-
   transform: rotateY(calc((var(--position)) * (360 / var(--quantity)) * 1deg))
     translateZ(550px) rotateX(-10deg);
 }
@@ -455,31 +455,34 @@ html {
   height: 100%;
   object-fit: cover;
 }
-
-.skill-list {
+.skill-wrapper {
   margin-top: 50px;
+  overflow: hidden;
+  width: 100%;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: justify;
+  white-space: nowrap;
 }
 
-.html,
-.css,
-.js,
-.react,
-.tailwind,
-.python,
-.cpp,
-.davinci,
-.blender,
-.excel {
-  margin-top: 30px;
+.skill-list {
+  display: inline-block;
+  animation: infinite-scr 20s linear infinite;
+}
+
+.litem {
+  display: inline-block;
+  margin: 30px 80px 0 80px;
   font-size: 24px;
   cursor: default;
-  margin-left: 80px;
-  margin-right: 80px;
+}
+
+@keyframes infinite-scr {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .html {
@@ -488,64 +491,35 @@ html {
   width: 80px;
   text-align: center;
 }
-.html:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .css {
   color: rgb(52, 113, 235);
   border-radius: 10px;
   width: 60px;
   text-align: center;
 }
-.css:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .js {
   color: #f0e16d;
   border-radius: 10px;
   width: 150px;
   text-align: center;
 }
-.js:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .react {
   color: #61dafb;
   border-radius: 10px;
   width: 120px;
   text-align: center;
 }
-.react:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .tailwind {
   color: #38bdf8;
   border-radius: 10px;
   width: 170px;
   text-align: center;
 }
-.tailwind:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .python {
   color: #aaa20d;
   border-radius: 10px;
   width: 100px;
   text-align: center;
-}
-.python:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
 }
 .cpp {
   color: #49b0ff;
@@ -553,42 +527,29 @@ html {
   width: 70px;
   text-align: center;
 }
-.cpp:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .excel {
   color: #1ab25e;
   border-radius: 10px;
   width: 120px;
   text-align: center;
 }
-.excel:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .davinci {
   color: #ff3700;
   border-radius: 10px;
   width: 200px;
   text-align: center;
 }
-.davinci:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #fff;
-}
-
 .blender {
   color: #ff8c00;
   border-radius: 10px;
   width: 120px;
   text-align: center;
 }
-.blender:hover {
+
+.litem:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px #fff;
+  animation-play-state: paused;
 }
 
 /* PROJECT SECTION */
@@ -716,6 +677,15 @@ html {
   width: 40%;
   height: 100%;
   border-radius: 20px;
+}
+#pdf-link {
+  display: inline-block;
+  color: #61dafb;
+  transition: color ease 0.3s, transform ease 0.3s;
+}
+#pdf-link:hover {
+  color: red;
+  transform: scale(110%);
 }
 
 #res-content {
@@ -860,6 +830,11 @@ html {
 .footer-links a {
   text-decoration: none;
   color: gray;
+  transition: color ease 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
 }
 
 #copyright {
