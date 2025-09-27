@@ -5,20 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Calculator</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./calc.css" />
   </head>
   <body>
-    <h1>Empowering Communities for a Better Tomorrow</h1>
-    <h3>
-      At our organization, we are dedicated to empowering students and
-      individuals through various initiatives aimed at fostering self-employment
-      and educational growth. Our training and internship programs are designed
-      to equip students and individuals with the skills they need to thrive. We
-      actively organize blood donation drives, medical diagnostic camps, and
-      provide free legal advice to ensure justice is accessible to all. Join us
-      in our mission to combat pollution, promote tree plantation, and educate
-      communities against the dangers of drugs and alcohol.
-    </h3>
-    
+    <div class="background"></div>
+    <nav>
+      <ul>
+        <li><a href="home.html" id="home-link">Home</a></li>
+        <li><a href="calc.html">Donation Calculator</a></li>
+      </ul>
+    </nav>
+    <h1 id="header">DONATION CALCULATOR</h1>
+    <div class="container">
+      <div class="text-container">
+        <div id="input-field">
+          <div class="text">
+            <div>You Donate:</div>
+            <div id="input"></div>
+          </div>
+          <div class="button-container">
+            <button class="button" id="50">₹ 50</button>
+            <button class="button" id="100">₹ 100</button>
+            <button class="button" id="500">₹ 500</button>
+            <button class="button" id="1000">₹ 1000</button>
+            <button class="button" id="2000">₹ 2000</button>
+            <button class="button" id="5000">₹ 5000</button>
+          </div>
+          <div class="custom-input">
+            <div>Custom Value:</div>
+            <input id="custom-in" type="text" placeholder="Custom Donation" />
+          </div>
+        </div>
+        <div id="output-field">
+          <div id="carousel-1"></div>
+          <div id="carousel-2"></div>
+          <div id="carousel-3"></div>
+          <div id="carousel-4"></div>
+        </div>
+      </div>
+      <div class="img-container">
+        <div class="carousel">
+          <img id="hunger" alt="food" src="./assets/food_drop.png" />
+          <img id="health" alt="health" src="./assets/health_clinic.png" />
+          <img id="teach" alt="education" src="./assets/education_drop.png" />
+          <img id="forest" alt="forests" src="./assets/forests.png" />
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div>© 2025 KANISHK TEOTIA</div>
+      <div>All rights reserved</div>
+      <a href="https://jamunafoundation.com" target="_blank" rel="noopener">
+        JAMUNA FOUNDATION
+      </a>
+    </footer>
   </body>
-  <script src="./scripts.js"></script>
+  <script src="./calc.js"></script>
 </html>

@@ -1,5 +1,79 @@
-body{
-    background-color: black;
-    color: white;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body {
+  color: brown;
+  font-family: "Poppins";
+  background-color: bisque;
 }
 
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  font-size: x-large;
+  background-color: rgb(92, 138, 45);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+nav ul li {
+  text-align: center;
+  width: 20%;
+  height: 100%;
+}
+nav ul li a {
+  color: antiquewhite;
+  padding: 5px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  border-radius: 10px;
+  color: antiquewhite;
+  font-weight: 800;
+  background-color: rgba(255, 0, 0, 0.167);
+}
+nav ul li a:active {
+  border-radius: 10px;
+  color: #4f2b22;
+  background-color: rgb(255, 255, 255);
+}
+
+#footer {
+  background-color: rgb(65, 0, 20);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#footer a {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: blue;
+  text-decoration: underline;
+}

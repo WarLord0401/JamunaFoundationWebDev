@@ -1,0 +1,57 @@
+#second-header {
+  margin: 100px 0 0;
+  text-align: center;
+}
+
+#header {
+  text-align: center;
+  margin: 10px 0 0 0;
+  color: rgb(211, 121, 41);
+  font-size: 72px;
+  font-weight: 100;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#paragraph-container {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.partition {
+  width: 30%;
+  text-align: center;
+}
+.partition h2 {
+  color: rgb(139, 0, 42);
+}
+
+.division {
+  width: 40%;
+  height: 60vh;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.img-scroll {
+  position: relative;
+  overflow: scroll;
+  width: 103%;
+  height: 104%;
+}
+
+.img-scroll img {
+  width: 100%;
+  height: 60vh;
+}
+
+#paragraph {
+  text-align: justify;
+}
