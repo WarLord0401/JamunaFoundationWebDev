@@ -9,12 +9,7 @@
   </head>
   <body>
     <div class="background"></div>
-    <nav>
-      <ul>
-        <li><a href="home.html" id="home-link">Home</a></li>
-        <li><a href="calc.html">Donation Calculator</a></li>
-      </ul>
-    </nav>
+    <div class="home"><a href="home.html" id="home-link">Home</a></div>
     <h1 id="header">DONATION CALCULATOR</h1>
     <div class="container">
       <div class="text-container">
@@ -35,6 +30,7 @@
             <div>Custom Value:</div>
             <input id="custom-in" type="text" placeholder="Custom Donation" />
           </div>
+          <div id="error-message">Minimum donation is ₹ 50!</div>
         </div>
         <div id="output-field">
           <div id="carousel-1"></div>
@@ -50,6 +46,12 @@
           <img id="teach" alt="education" src="./assets/education_drop.png" />
           <img id="forest" alt="forests" src="./assets/forests.png" />
         </div>
+      </div>
+      <div class="carousel-controls">
+        <button title="Hunger" class="dot active"></button>
+        <button title="Health" class="dot"></button>
+        <button title="Education" class="dot"></button>
+        <button title="Forests" class="dot"></button>
       </div>
     </div>
     <footer id="footer">

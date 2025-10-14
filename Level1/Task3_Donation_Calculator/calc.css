@@ -1,9 +1,34 @@
 #header {
   text-align: center;
-  margin: 100px 0 0 0;
+  margin: 10px 0 40px 0;
   color: rgb(211, 121, 41);
   font-size: 4em;
   font-weight: 100;
+}
+.home {
+  background-color: rgb(211, 64, 19);
+  width: 10vw;
+  font-size: x-large;
+  position: absolute;
+  border-radius: 8px;
+}
+
+.home a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px 10px;
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+  color: #e1ffcf;
+  transition: 0.3s;
+}
+
+.home a:hover {
+  background-color: #4caf50;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
 }
 
 .container {
@@ -13,6 +38,7 @@
 }
 
 .text-container {
+  margin-top: 30px;
   height: 100%;
   width: 30%;
   font-size: x-large;
@@ -51,7 +77,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 15px 0;
+  margin: 50px 0;
   width: 90%;
 }
 
@@ -63,9 +89,41 @@
   margin-top: 20px;
 }
 
-#output-field{
-    width: 100%;
-    overflow: hidden;
+#output-field {
+  position: absolute;
+  bottom: 10px;
+  left: 3vw;
+  width: 28%;
+  height: 30%;
+}
+
+#output-field div {
+  position: relative;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+#output-field > div,
+.carousel img {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+#output-field > .active,
+.carousel img.active {
+  opacity: 1;
+  position: absolute;
+}
+
+#error-message {
+  position: absolute;
+  top: 60vh;
+  left: 12%;
+  color: red;
+  font-size: 0.7em;
+  margin-top: 10px;
+  display: none;
 }
 
 input[type="text"] {
@@ -97,18 +155,44 @@ input[type="text"] {
 }
 
 .img-container {
+  position: absolute;
+  left: 30%;
   background-color: black;
-  height: 100%;
-  width: 70%;
+  height: 70vh;
+  width: 68vw;
+  overflow: hidden;
 }
 
 .carousel {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .carousel img {
   width: 100%;
   height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  z-index: 10;
+  bottom: 7vh;
+  left: 64%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-controls button {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(100, 28, 0);
+  cursor: pointer;
+}
+
+.carousel-controls button.active {
+  background-color: rgb(1, 180, 13);
 }

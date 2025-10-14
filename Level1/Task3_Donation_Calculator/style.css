@@ -74,6 +74,5 @@ nav ul li a:active {
 }
 
 #footer a:hover {
-  color: blue;
   text-decoration: underline;
 }
