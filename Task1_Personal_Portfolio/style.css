@@ -151,7 +151,7 @@ html {
 
 .scrollbox {
   overflow: hidden;
-  height: 45px;
+  height: 46px;
   position: relative;
   box-sizing: content-box;
 }
@@ -161,12 +161,14 @@ html {
   color: rgba(180, 180, 180, 0.3);
 }
 .scrollbox span {
+  position: relative;
   display: block;
   height: 100%;
   flex-direction: column;
   text-align: center;
   animation: scroll-vert 5s infinite;
   font-weight: 500;
+  align-items: center;
 }
 
 @keyframes scroll-vert {
@@ -261,7 +263,7 @@ html {
 }
 
 #about:target #profile {
-  animation: slideStareBounce 5s ease-in forwards;
+  animation: slideStareBounce 8s ease-in forwards;
 }
 
 @keyframes slideStareBounce {
@@ -275,7 +277,7 @@ html {
     opacity: 1;
     z-index: 0;
   }
-  60% {
+  70% {
     transform: translateY(40%) rotateY(180deg) rotate(-10deg);
     opacity: 1;
     z-index: 0;
@@ -459,6 +461,7 @@ html {
   margin-top: 50px;
   overflow: hidden;
   width: 100%;
+  height: 20%;
   position: relative;
   white-space: nowrap;
 }
@@ -545,7 +548,11 @@ html {
   width: 120px;
   text-align: center;
 }
-
+.oops {
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+}
 .litem:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px #fff;
